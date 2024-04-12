@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>beatbox</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
+    <title>Spotify - Web Player: Music for everyone</title>
+</head>
+
+<body>
+    <div class="container flex bg-black">
+        <div class="left">
+            <div class="close">
+                <img width="30" class="invert" src="close.svg" alt="">
+            </div>
+            <div class="home bg-grey rounded m-1 p-1">
+                <div class="logo"><img width="110" class="invert" src="beatboxer.jpg" alt=""></div>
+                <ul>
+                    <li><img class="invert" src="home.svg" alt="home">Home</li>
+                    
+                      
+                      <li id="search-li">
+                        <img class="invert" src="search.svg" alt="home" onclick="toggleTextBox()">Search
+                        <!-- Add text box for search -->
+                        
+                      </li>
+                      
+                      <script>
+                        function toggleTextBox() {
+                          var textBox = document.getElementById('search-box');
+                          textBox.style.display = textBox.style.display === 'none' ? 'block' : 'none';
+                        }
+                      </script>
+                      
+                      
+                      
+                      
+                </ul>
+            </div>
+
+            <div class="library bg-grey rounded m-1 p-1">
+                <div class="heading">
+                    <img class="invert" src="playlist.svg" alt="">
+                    <h2>
+                        Your Favourites
+                    </h2>
+                </div>
+
+                <div class="songList">
+
+                    <ul>
+                        <div id="container">
+                    
+                            
+                            <div id="songs">
+                                <style>
+                                    .song-card {
+                                      position: relative;
+                                      display: inline-block;
+                                      margin: 10px;
+                                    }
+                                  
+                                    .song-card img {
+                                      width: 300px; /* Adjust the width as per your requirement */
+                                      height: auto; /* Maintain aspect ratio */
+                                      border-radius: 5px;
+                                      transition: transform 0.3s ease-in-out;
+                                    }
+                                  
+                                    .song-card img:hover {
+                                      transform: scale(1.1);
+                                    }
+                                  
+                                    .overlay {
+                                      position: absolute;
+                                      top: 0;
+                                      left: 0;
+                                      width: 100%;
+                                      height: 100%;
+                                      background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity and color as per your design */
+                                      border-radius: 5px;
+                                      display: none;
+                                      justify-content: center;
+                                      align-items: center;
+                                    }
+                                  
+                                    .song-card:hover .overlay {
+                                      display: flex;
+                                    }
+                                  
+                                    .overlay a {
+                                      color: white;
+                                      text-decoration: none;
+                                      font-weight: bold;
+                                      padding: 5px 10px;
+                                      background-color: #333;
+                                      border-radius: 5px;
+                                    }
+                                  </style>
+                                  
+                                  <div class="song-card">
+                                    <img src="eminemicon.jpg"Icon">
+                                    <div class="overlay">
+                                      <a href="./index1about.html">Eminem</a>
+                                    </div>
+                                  </div>
+                                  <br><br>
+                                  <div class="song-card">
+                                    <img src="kendrickname.jpg" alt="Icon">
+                                    <div class="overlay">
+                                      <a href="./index2.html">Kendrick</a>
+                                    </div>
+                                  </div>
+                                  <br><br>
+                                  <div class="song-card">
+                                    <img src="Drakeicon.jpg" alt="Icon">
+                                    <div class="overlay">
+                                      <a href="./index3.html">Drake</a>
+                                    </div>
+                                  </div>
+                                  
+                              
+                              
+                              <!-- Add more songs as needed -->
+                            </div>
+                    </ul>
+                </div>
+
+                <div class="footer">
+                    <div><a href="https://www.spotify.com/jp/legal/"><span>Legal</span></a></div>
+                    <div><a href="https://www.spotify.com/jp/privacy/"><span>Privacy Center</span></a></div>
+                    <div><a href="https://www.spotify.com/jp/legal/privacy-policy/"><span>Privacy Policy</span></a>
+                    </div>
+                    <div><a href="https://www.spotify.com/jp/legal/cookies-policy/"><span>Cookies</span></a></div>
+                    <div><a href="https://www.spotify.com/jp/legal/privacy-policy/#s3"><span>About Ads</span></a></div>
+                    <div><a href="https://www.spotify.com/jp/accessibility/"><span>Accessibility</span></a></div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="right bg-grey rounded">
+            <div class="header">
+                <div class="nav">
+                    <div class="hamburgerContainer">
+
+                        <img width="40" class="invert hamburger" src="hamburger.svg" alt="">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M15 6L9.70711 11.2929C9.37377 11.6262 9.20711 11.7929 9.20711 12C9.20711 12.2071 9.37377 12.3738 9.70711 12.7071L15 18"
+                                stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9 18L14.2929 12.7071C14.6262 12.3738 14.7929 12.2071 14.7929 12C14.7929 11.7929 14.6262 11.6262 14.2929 11.2929L9 6"
+                                stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button class="signupbtn" type="button" onclick="location.href='./login.html'">Sign up</button>
+                    <button class="loginbtn" type="button" onclick="location.href='./login.html'">Log in</button>
+                </div>
+            </div>
+            <div class="BEAT BOX PLAYLIST">
+                <BR></BR>
+                <h1>BEAT BOX PLAYLIST</h1>
+                <div class="cardContainer">
+                    <div class="card">
+                      <a href="file:///C:/Users/nitis/Web%20programming/project/Main%20body/artist2.html">
+                        <img src="Drakeface.jpg"></a>
+                        <h2>
+                            DRAKE                      
+                        </h2>
+                        <p>Drake alltime hits!!</p>
+                    </div>
+                    <div class="card">
+                        <img src="funky.jpg">
+                        <h2>
+                            Feeling Funky
+                        </h2>
+                        <p>hits to dance to</p>
+                    </div>
+                    <a href="./artist1.html"></a>
+                    <div class="card">
+                      <a href="./artist1.html">
+                        <img src="travisscottface.jpg"></a>
+                        <h2>
+                            TRAVIS SCOTT
+                        </h2>
+                        <p>TRAVIS SCOTT HITS!</p>
+                    </div>
+                    
+                    <div class="card">
+                      <a href="./artist3.html">
+                        <img src="Kendrickface.jpg"></a>
+                        <h2>
+                            Kendrick Lamar!
+                        </h2>
+                        <p>Kendrick lamar hits</p>
+                    </div>
+                    <div class="card">
+                        <img src="lovesongs.jpg">
+                        <h2>
+                            Romantic songs 
+                        </h2>
+                        <p>hit love songs</p>
+                    </div>
+                    <div class="card">
+                        <img src="2010hits.jpg">
+                        <h2>
+                            2010 HITS!
+                        </h2>
+                        
+                    </div>
+                    <div class="card">
+                        <img src="chillhtis.jpg">
+                        <h2>
+                            CHILL HITS
+                        </h2>
+                        <p>relax and chill with this playlist</p>
+                    </div>
+                    <div class="card">
+                        <img src="80'shits.jpg">
+                        <h2>
+                            80s CLASSICS
+                        </h2>
+                        
+                    </div>
+                    
+                    
+                    
+
+                </div>
+                <div class="playbar">
+                    <div class="seekbar">
+                        <div class="circle">
+
+                        </div>
+                    </div>
+                    <div class="abovebar">
+
+
+                        <div class="songinfo">
+                            <h2>SICKO MODE-Travis Scott and Drake</h2>
+                        </div>
+                        <div class="songbuttons">
+                            <img width="35" id="previous" src="prevsong.svg" alt="">
+                            <img width="35" id="play" src="play.svg" alt="">
+                            <img width="35" id="next" src="nextsong.svg" alt="">
+                        </div>
+                        <div class="timevol">
+
+                       
+                        <div class="songtime">
+
+                        </div>
+                        <div class="volume">
+                            <img width="25" src="volume.svg" alt="">
+                            <div class="range">
+                                <input type="range" name="volume" id="">
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
